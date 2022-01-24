@@ -1,0 +1,272 @@
+/**
+ * @name         koneko   
+ * @author       koneko
+* @version 1.01
+
+*/
+@import url("https://goldenlys.github.io/BetterDiscord-Elysia/HoverMemberList.css");
+
+@import url('https://rmkx.github.io/Boreal/src/boreal.css'); /*Main CSS sheet*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); /*Elegir la font para añadir*/
+
+::-webkit-input-placeholder, body, button, input, select, textarea {
+    font-family: "Lato"; /*Elegir el tipo de letra*/
+    
+}
+.theme-dark, .theme-light {
+    --channels-default: rgb(31, 255, 255);
+    --text-muted: rgb(31, 255, 255);
+    --background-floating: var(--panel-boxes);
+    --header-secondary: rgb(31, 255, 255);
+    --text-link: var(--links);
+    
+}
+
+
+:root {
+    
+
+
+	
+	/* Icons */
+	--dplus-icon-home-dark: url(https://imgur.com/0MqvVLV.gif);
+
+	
+
+	/* Widths */
+	--dplus-channels-width: 240px;
+	--dplus-members-width: 240px;
+	--dplus-scrollbar-width: 10px;
+
+
+    --text-normal:rgb(31, 255, 255);
+
+    --channels-default: rgb(0, 255, 255);
+
+    --server-hiding-width: 2.5%; /*Amount that will be shown when the channels panel hides | Default 50px*/
+    --members-hiding-width: 2.9%; /*Amount that will be shown when the server's members panel hides | Default 2.9%*/
+    --showing-width: 13.5%; /*Amount that will be shown when the panels show | Default 13.5%*/
+    --transition-speed: 0.35s; /*Changes the transition speed*/
+    --hidden-background: transparent; /*Background of the elements when hidden*/
+    /*Background of the elements when showing*/
+    --showing-background: linear-gradient(195deg, rgba(0,182,122,0.39537821964723385) 14%, rgba(0,241,255,0.3785714969581583) 35%, rgba(23,114,246,0.22170875186011907) 59%, rgba(15,8,74,0.2049020291710434) 87%, rgba(6,1,42,0.0536415249693627) 96%);
+    
+    --background-image: url(https://imgur.com/5XBEqPH.png); /*Cambia la imagen de fondo*/
+    --bg-blur: 0px; /*changes the blur of the background image*/
+    --main-accent: rgb(35, 77, 117); /*Main accent of the theme for little elements*/
+    --main-accent-rgb: 35, 77, 117; /*cambia las notificaciones del canal y servidores*/
+    --popout-blur: 2px; /*Changes the blur of elements that appear on screen*/
+    --bg-opacity: 1; /*Changes the opacity of the background*/
+    --links: rgb(97, 195, 224); /*Color for links*/
+
+  
+    --panel-boxes: rgba(0, 0, 0, 0.781); /*Changes the background of the surrounded panels*/
+    --second-panel-bg: rgba(0, 0, 0, 0.8); /*changes the bg of panels that come out, like right clicking on a user*/
+    --panel-border: 0px solid rgb(70, 69, 69); /*Changes the borders of the surrounded panels*/
+    --panel-border-radius: 8px; /*Changes the radius of the surrounded panels*/
+  
+    --chat-hover: hsla(0, 0%, 0%, 0.74) ; /*Message background when hovering*/
+    --embed-border: 0px; /*Makes it so some embeds in chat have their corresponding border | 0px = no borders*/
+    
+    --buttons-background: rgba(0, 0, 0, 0.3); /*Changes the color of the buttons*/
+    --buttons-border: 0px solid rgb(70, 69, 69); /*Changes the color of the buttons*/
+    --buttons-radius: 8px; /*Changes the radius of the buttons*/
+    --buttons-color: white; /*Changes the color of the button text*/
+  
+    /*Cambia el color del hover de  los canales y miembros*/
+    /*Cambia de derecha a izquierda la tonalidad de colores*/
+    --element-hovered: linear-gradient(195deg, rgba(0,182,122,0.39537821964723385) 14% /*derecha*/,
+    rgba(0,241,255,0.3785714969581583) 35%, rgba(23,114,246,0.22170875186011907) 59% /*centro*/,
+     rgba(15,8,74,0.2049020291710434) 87%, rgba(6,1,42,0.0536415249693627) 96%) /*izquierda*/; 
+     /*Cambia el color del hover de  los niveles*/
+    --underline-gradient: linear-gradient(195deg, rgba(0,182,122,0.39537821964723385) 14%,
+     rgba(0,241,255,0.3785714969581583) 35%,
+     rgba(23,114,246,0.22170875186011907) 59%,
+      rgba(15, 8, 74, 0.473) 87%);
+  
+    /* Menú de ajustes*/
+
+    --settings-width: 60%; /*Anchura del menu*/
+    --settings-heigth: 85%; /*Altura del menú*/
+    --icon-padding: 35px; /*Distancia entre el icono y el texto (menú) | Default 35px*/
+
+
+
+    
+}
+
+
+:root {
+
+	--dplus-radius-ui: 10px;
+	--dplus-radius-avatar: 20%;
+	--dplus-radius-server: 20%;
+
+	--dplus-spacing-ui: 10px;
+	--dplus-spacing-app: 10px;
+
+
+
+	--dplus-dark-bgc-ui-base: hsla(0, 0%, 0%, 0.74);
+	--dplus-dark-bgc-ui-base-hover: hsla(0, 0%, 0%, 0.82);
+	--dplus-dark-bgc-ui-card: hsla(0, 0%, 7%, 0.75);
+	--dplus-dark-bgc-ui-card-hover: hsla(0, 0%, 15%, 0.50);
+	--dplus-dark-bgc-chatmsg: hsla(0, 0%, 0%, 0.74);
+	--dplus-dark-bgc-chatmsg-hover: hsla(0, 0%, 0%, 0.82);
+	--dplus-dark-bgc-popout: hsla(0, 0%, 0%, 0.75);
+	--dplus-dark-bgc-button: hsla(0, 0%, 15%, 0.50);
+	--dplus-dark-bgc-button-hover: hsla(0, 0%, 20%, 0.60);
+	--dplus-dark-bgc-server-button: hsla(0, 0%, 15%, 0.50);
+	--dplus-dark-bgc-server-button-hover: hsla(0, 0%, 20%, 0.60);
+}
+
+	
+.theme-dark {
+	--dplus-bgc-ui-base: var(--dplus-dark-bgc-ui-base);
+	--dplus-bgc-ui-base-hover: var(--dplus-dark-bgc-base-hover);
+	--dplus-bgc-ui-card: var(--dplus-dark-bgc-ui-card);
+	--dplus-bgc-ui-card-hover: var(--dplus-dark-bgc-ui-card-hover);
+	--dplus-bgc-chatmsg: var(--dplus-dark-bgc-chatmsg);
+	--dplus-bgc-chatmsg-hover: var(--dplus-dark-bgc-chatmsg-hover);
+	--dplus-bgc-popout: var(--dplus-dark-bgc-popout);
+	--dplus-bgc-button: var(--dplus-dark-bgc-button);
+	--dplus-bgc-button-hover: var(--dplus-dark-bgc-button-hover);
+	--dplus-bgc-server-button: var(--dplus-dark-bgc-server-button);
+	--dplus-bgc-server-button-hover: var(--dplus-dark-bgc-server-button-hover);
+	--dplus-bgc-radiobar-hover: hsla(0, 0%, 15%, 0.50);
+	--dplus-bgc-radiobar-selected: hsla(0, 0%, 20%, 0.60);
+}
+
+.chat-3bRxxu, .wrapper-3vR61M {
+	background-color: transparent;
+	border-radius: var(--dplus-radius-ui);
+}
+.wrapper-1F5TKx, #app-mount .children-19S4PO:after {display: none;}
+
+    .wrapper-3t9DeA foreignObject, .callAvatarMask-1SLlRi foreignObject, .wrapper-3t9DeA + svg foreignObject, .avatarContainerMasked-PIJ-3L foreignObject {mask: none;}
+    .wrapper-3t9DeA img, .voiceAvatar-14IynY, .border-Jn5IOt, .avatarHint-2A3RNb, .wrapper-2QE8vf.ringingIncoming-38YcLn:after, .wrapper-2QE8vf.ringingOutgoing-mbXhhQ:after, .avatar-1BDn8e, .option-96V44q.user-O3Czj0 .displayAvatar-1wWlVM  {
+        border-radius: var(--dplus-radius-avatar) !important; }
+    .avatar-1BDn8e.clickable-1bVtEA:active {translate: none;}
+    
+
+    .cozy-3raOZG.wrapper-2a6GCs {
+        padding-left: calc(var(--dplus-icon-avatar-chat) + var(--dplus-spacing-ui) * 2);
+    }
+
+.avatar-3uk_u9 .wrapper-3t9DeA {
+	width: var(--dplus-icon-avatar-list) !important;
+	height: var(--dplus-icon-avatar-list) !important;
+}
+
+.avatar-3uk_u9 {
+	margin-right: var(--dplus-spacing-ui);
+}
+
+.layout-2DM8Md {
+	height: calc(var(--dplus-icon-avatar-list) + var(--dplus-spacing-ui));
+}
+
+.container-1r6BKw.themed-ANHk51 {
+	background: var(--dplus-bgc-ui-base);
+}
+
+:root{
+	--dplus-icon-avatar-chat: 64px;
+	--dplus-icon-avatar-list: 32px;
+	--dplus-icon-avatar-profile: 80px;
+	--dplus-icon-server-sidebar: 48px;
+	--dplus-icon-server-list: 32px;
+
+}
+.avatar-1BDn8e {
+	position: absolute;
+	margin-top: 0;
+	top: var(--dplus-spacing-ui) !important;
+	left: var(--dplus-spacing-ui) !important;
+	height: var(--dplus-icon-avatar-chat) !important;
+	width: var(--dplus-icon-avatar-chat) !important;
+}
+
+.wrapper-2a6GCs:not(.disableInteraction-286MMw), .scrollerSpacer-avRLaA, .groupStart-23k01U:before, .container-3RCQyg {
+	background-color: var(--dplus-bgc-chatmsg);
+	box-shadow: none;
+}
+
+.groupStart-23k01U {
+	border-radius: var(--dplus-radius-ui) var(--dplus-radius-ui) 0 0;
+	padding-top: var(--dplus-spacing-ui) !important;
+}
+
+.username-1A8OIy {
+	font-size: 1.125rem;
+}
+
+
+.scrollerSpacer-avRLaA, .groupStart-23k01U:before {
+	border-radius:  0 0 var(--dplus-radius-ui) var(--dplus-radius-ui);
+	width: 100%;
+}
+
+.wrapper-2a6GCs:hover, .wrapper-2a6GCs.selected-2P5D_Z {
+	background: var(--dplus-bgc-chatmsg-hover) !important;
+}
+
+.chatContent-a9vAAp {
+	--dplus-calc-chatmsg-spacing: calc(var(--dplus-icon-avatar-chat) / 10);
+}
+
+.group-spacing-0 { --group-spacing: 0px; }
+.group-spacing-4 { --group-spacing: 4px; }
+.group-spacing-8 { --group-spacing: 8px; }
+.group-spacing-16 { --group-spacing: 10px; }
+.group-spacing-24 { --group-spacing: var(--dplus-spacing-ui); }
+
+
+.groupStart-23k01U {
+	margin-top: calc(var(--group-spacing) + var(--dplus-radius-ui) + var(--dplus-calc-chatmsg-spacing) + var(--dplus-spacing-ui)) !important;
+}
+.groupStart-23k01U:before {
+	content: "";
+	position: absolute;
+	top: calc(0px - var(--group-spacing) - var(--dplus-radius-ui) - var(--dplus-calc-chatmsg-spacing) - var(--dplus-spacing-ui)) !important;
+	left: 0;
+	pointer-events: none;
+	height: calc(var(--dplus-radius-ui) + var(--dplus-calc-chatmsg-spacing)  + var(--dplus-spacing-ui));
+}
+
+
+.homeIcon-AaowEC {display: none !important;}
+.wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9,
+.wrapper-1BJsBx:hover .childWrapper-anI2G9 {
+	background-color: transparent;
+}
+.theme-dark .tutorialContainer-11ICd5 .childWrapper-anI2G9,
+.theme-light .theme-dark .tutorialContainer-11ICd5 .childWrapper-anI2G9,
+.theme-light .tutorialContainer-11ICd5 .childWrapper-anI2G9 {
+	background-image: var(--dplus-icon-home-dark);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+		/* Server list */
+.guilds-1SWlCJ foreignObject {mask: none;}
+.guildSeparator-3s64Iy, .guildSeparator-33mFX6 {display: none}
+.folder-1hbNCn {background-color: transparent;}
+.folder-1hbNCn.hover-qTxTR_ {background-color: var(--dplus-bgc-server-button-hover)}
+#app-mount .childWrapper-anI2G9, #bd-pub-button {background-color: var(--dplus-bgc-server-button);}
+#bd-pub-button { border-radius: var(--dplus-radius-ui); }
+#app-mount .guilds-1SWlCJ {
+	background: var(--dplus-bgc-ui-base);
+	border-radius: var(--dplus-radius-ui);
+}
+.guilds-1SWlCJ, .listItem-GuPuDH, .listItem-1hlISG, .wrapper-3Njo_c {
+	width: calc(var(--dplus-icon-server-sidebar) + var(--dplus-spacing-ui) * 2)
+}
+.listItem-GuPuDH, .listItem-1hlISG {
+	margin: 0 0 var(--dplus-spacing-ui);
+}
+
